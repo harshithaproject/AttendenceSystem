@@ -1,0 +1,260 @@
+<html>
+<style>
+*{
+margin: 0;
+padding:0;
+}
+.testimonials{
+margin: 50px auto;
+}
+.testimonials h1
+{
+text-align:center;
+font-weight:bold;
+color:#ff9800;
+padding-bottom:10px;
+text-transform:uppercase;
+}
+.testimonials h1:: after
+{
+ content:'';
+ background:#ff9800;
+ display:block;
+ height:3px;
+ width:170px;
+ margin:20px auto 5px;
+}
+.testimonials .row{
+margin-top:30px;
+}
+
+.col-md-4{
+margin: 40px auto;
+}
+.profile{
+padding: 70px 10px 10px;
+background-color: #efefef;
+}
+.profile img{
+top:-60px;
+position: absolute;
+left:clac(50% -50%);
+border: 10px solid white;
+}
+.user{
+ width:120px;
+ height:120px;
+ border-radius: 50%;
+}
+.profile h3 
+{
+font-size:20px;
+margin-top:15px;
+color: #ff9800;
+}
+span{
+font-size: 12px;
+color:#333;
+}
+blockquote{
+font-size: 16px;
+line-height:30px;
+}
+blockquote::before{
+content: '\93';
+font-size:50px;
+position:relative;
+color: #ff9800;
+line-height:20px;
+bottom:-15px;
+right:5px;
+}
+
+blockquote::after{
+content: '\94';
+font-size:50px;
+position:relative;
+color: #ff9800;
+line-height:10px;
+bottom:-15px;
+left:5px;
+}
+
+.profile:hover{
+box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+cursor:pointer;
+}
+ ul{
+list-style-type:none;
+margin:0;
+pading:0;
+overflow:hidden;
+background-color:#333;
+}
+ li{
+float:left;
+}
+  li a{
+display:block;
+color:white;
+text-align:left;
+padding:14px 12px;
+text-decoration:none;
+
+}
+ li a:hover:not(.active){
+background-color:#111;
+}
+.active{
+background-color:#33ccc7;
+}
+
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#myMenu li a {
+  background-color:#33ccc7;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+
+<head>
+<title>firstpage </title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<body>
+
+<br>
+<input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+
+<ul id="myMenu">
+  <li><a href="#">About</a></li>
+  <li><a href="#">Student</a></li>
+  <li><a href="#">Faculty</a></li>
+  <li><a href="#">Admin</a></li>
+  <li><a href="#">Contact</a></li>
+  </ul>
+<!--<ul class="active">
+	<li><a  class="active"href = "about.php">About</a></li>
+	<li><a class="active" href="">Student</a></li>
+	<li><a  class="active" href=""> Faculty</a></li>
+	<li><a  class="active" href="">Admin</a></li>
+	<li><a  class="active" href="Contact.php">Contact</a></li>
+</ul>-->
+<br>
+<div class="h-100 d-flex justify-content-center">
+<div class="row">
+  <div class="column">
+    <img src="studentbutton.jpg" alt="Student"  usemap="#workmap" width="350" height="300">
+	<map name="workmap">
+  <area shape="rect" coords="150,250,15,295" alt="login" href="studentlogin.html">
+  <area shape="rect" coords="330,250,200,300" alt="Register" href="regform.php">
+  </map>
+  </div>
+  <div class="column">
+    <img src="college-faculty.jpg" alt="Faculty" usemap="#faculty"  width="350" height="300">
+	<map name="faculty">
+  <area shape="rect" coords="135,250,30,295" alt="login" href="facultylogin.html">
+  <area shape="rect" coords="285,250,185,300" alt="Register" href="facultyform.php">
+  </map>
+  </div>
+  <div class="column">
+    <img src="Adminbutton.png" alt="Admin"  usemap="#admin" width="350" height="300" >
+	<map name="admin">
+  <area shape="rect" coords="250,220,85,300" alt="login" href="adminpage.html">
+  </map>
+  <section class="testimonials">
+  <div class="container">
+  <h1>TESTIMONIALS</h1>
+  <div class="row">
+  <div class="col-md-4 text-center">
+  <div class="profile">
+  <img src="user1.jpg" alt="Avatar"  class="user" style="width:90px">
+  <blockquote>
+  SNDT University has been the feature of my journey, like it has been for so many more before me. This year, as it completes its centennial year, one can only stand back and reflect at the number of lives it has touched, changed and empowered over the…
+  </blockquote>
+  <h3><span>Bhaghyashree Purohit
+</span>ALUMNI 2003, UMIT  (I.T.), CO-FOUNDER, INKNOWLEDGE, INC</h3>
+
+</div>
+</div>
+
+  <div class="col-md-4 text-center">
+  <div class="profile">
+  <img src="user2.jpg" alt="Avatar"  class="user" style="width:90px">
+  <blockquote>
+  Women empowerment is an important agenda for our nation and the SNDT University has been in the centre and front of driving this priority for India since 1916. Today, as I pen my thoughts for this very special publication, I take immense pride in having completed my Master's…
+  </blockquote>
+  <h3><span>Geeta thapa
+</span>ALUMNI 2011, PGSR ECONOMICS DEPARTMENT</h3>
+
+</div>
+</div>
+<div class="col-md-4 text-center">
+  <div class="profile">
+  <img src="user3.jpg" alt="Avatar"  class="user" style="width:90px">
+  <blockquote>
+ I firmly and proudly can say that persuing graduation from SNDTWU has been one of the best decisions I have ever made. This finest women’s university has given birth to so many empowered women who have excelled in their lives across various domains and professions be it in the fashion industry,…
+  </blockquote>
+  <h3><span>Padma Dhar
+</span>ALUMNI 2011,UMIT, TEAM LEAD ACCENTURE</h3>
+
+</div>
+</div>
+
+
+
+</body>
+</html>
